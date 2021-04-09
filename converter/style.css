@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(53, 53, 53);
+}
+
+
+#div1{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.margin-alignment{
+    border-radius: 30px;
+    font-size: 30px;
+}
+.div3{
+    font-size: 60px;
+}
+
+.margin1{
+    border-radius: 15px;
+    width: 100px;
+    height: 50px;
+    background-color: indianred;
+}
+
+.design{
+    border-radius: 10px;
+    width: 95px;
+    height: 25px;
+}
+p{
+    font-size: 25px;
+    text-decoration-color : blue; 
+}
+#reset{
+    border-radius: 15px;
+    width: 100px;
+    height: 50px;
+    background-color: brown;
+}
