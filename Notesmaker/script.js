@@ -1,4 +1,4 @@
-console.log("This is Aman Chandel");
+//console.log("This is Aman Chandel");
 showNotes(); // to stop disappearance of notes on reloading page.
 //if User Adds A notes, Add it to localStorage
 
@@ -49,7 +49,7 @@ function showNotes() {
 
 //Function to delete a note
 function deleteNote(index){
-    console.log(' I am Deleting');
+    //console.log(' I am Deleting');
     let notes = localStorage.getItem("notes");
     if (notes == null) {
       notesObj = [];
@@ -61,3 +61,24 @@ function deleteNote(index){
     localStorage.setItem("notes", JSON.stringify(notesObj)); //Converting into string.
     showNotes();
 }
+
+//To search element of notes.
+let search = document.getElementById("searchTxt");
+search.addEventListener('input' , function(){
+
+  let inputVal = search.value;
+  //console.log('Input event fired');
+
+  let noteCards = document.getElementsByClassName('noteCard');
+  Array.from(noteCards).forEach(function(element){
+    let cardTxt = element.getElementsByTagName("p")[0].innerText;
+
+    if(cardTxt.includes(inputVal.toLowerCase()) || cardTxt.includes(inputVal[0].toUpperCase())){
+      //if any first alphabet is capital in the sentence.
+      element.style.display = "block";
+    }
+    else{
+      element.style.display = "none";
+    }
+  })
+})
